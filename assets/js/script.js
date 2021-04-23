@@ -229,6 +229,42 @@ function generatePassword() {
         createPassword.push(randomCharSelect);
         var stringPassword = createPassword.join("");
       }
+    } else if (incSpecial) {
+      for (i = 0; i < passLength; i++) {
+        var randomSpec = charSpecial.charAt(
+          Math.floor(Math.random() * charSpecial.length)
+        );
+
+        createPassword.push(randomSpec);
+        var stringPassword = createPassword.join("");
+      }
+    } else if (incNumeric) {
+      for (i = 0; i < passLength; i++) {
+        var randomNum = charNumeric.charAt(
+          Math.floor(Math.random() * charNumeric.length)
+        );
+
+        createPassword.push(randomNum);
+        var stringPassword = createPassword.join("");
+      }
+    } else if (incLower) {
+      for (i = 0; i < passLength; i++) {
+        var randomLow = charLower.charAt(
+          Math.floor(Math.random() * charLower.length)
+        );
+
+        createPassword.push(randomLow);
+        var stringPassword = createPassword.join("");
+      }
+    } else if (incUpper) {
+      for (i = 0; i < passLength; i++) {
+        var randomUpp = charUpper.charAt(
+          Math.floor(Math.random() * charUpper.length)
+        );
+
+        createPassword.push(randomUpp);
+        var stringPassword = createPassword.join("");
+      }
     } else {
       var message = alert(
         "At least one character type must be selected. Refresh the page to start again."
