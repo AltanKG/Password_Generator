@@ -25,6 +25,6 @@ THEN the password is either displayed in an alert or written to the page
 ## Deployed Site
 
 Here is a an image of the website:
-![An image of the password generator page] (assets/images/Password_Generator-1.png)
+![An image of the password generator page](assets/images/Password_Generator-1.png)
 
 Link to deployed site: https://altankg.github.io/Password_Generator/
