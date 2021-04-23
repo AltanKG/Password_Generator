@@ -66,6 +66,66 @@ function generatePassword() {
       }
 
       // Code from if statement is repeated for other scenarios
+    } else if (incSpecial && incNumeric && incLower) {
+      for (i = 0; i < passLength; i++) {
+        var randomSpec = charSpecial.charAt(
+          Math.floor(Math.random() * charSpecial.length)
+        );
+        var randomNum = charNumeric.charAt(
+          Math.floor(Math.random() * charNumeric.length)
+        );
+        var randomLow = charLower.charAt(
+          Math.floor(Math.random() * charLower.length)
+        );
+
+        var randomChars = randomSpec.concat(randomNum, randomLow);
+        var randomCharSelect = randomChars.charAt(
+          Math.floor(Math.random() * randomChars.length)
+        );
+
+        createPassword.push(randomCharSelect);
+        var stringPassword = createPassword.join("");
+      }
+    } else if (incSpecial && incLower && incUpper) {
+      for (i = 0; i < passLength; i++) {
+        var randomSpec = charSpecial.charAt(
+          Math.floor(Math.random() * charSpecial.length)
+        );
+        var randomUpp = charUpper.charAt(
+          Math.floor(Math.random() * charUpper.length)
+        );
+        var randomLow = charLower.charAt(
+          Math.floor(Math.random() * charLower.length)
+        );
+
+        var randomChars = randomSpec.concat(randomLow, randomUpp);
+        var randomCharSelect = randomChars.charAt(
+          Math.floor(Math.random() * randomChars.length)
+        );
+
+        createPassword.push(randomCharSelect);
+        var stringPassword = createPassword.join("");
+      }
+    } else if (incNumeric && incLower && incUpper) {
+      for (i = 0; i < passLength; i++) {
+        var randomUpp = charUpper.charAt(
+          Math.floor(Math.random() * charUpper.length)
+        );
+        var randomNum = charNumeric.charAt(
+          Math.floor(Math.random() * charNumeric.length)
+        );
+        var randomLow = charLower.charAt(
+          Math.floor(Math.random() * charLower.length)
+        );
+
+        var randomChars = randomUpp.concat(randomNum, randomLow);
+        var randomCharSelect = randomChars.charAt(
+          Math.floor(Math.random() * randomChars.length)
+        );
+
+        createPassword.push(randomCharSelect);
+        var stringPassword = createPassword.join("");
+      }
     } else if (incSpecial && incNumeric) {
       for (i = 0; i < passLength; i++) {
         var randomSpec = charSpecial.charAt(
